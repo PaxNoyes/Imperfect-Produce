@@ -1,0 +1,60 @@
+Getting Started
+
+1. Clone this repo, or download the zip file to your computer
+2. In your terminal navigate to where you saved the repo or downloaded zip file
+2. Start cypress by running 'npx cypress open' in your terminal
+3. Cypress will open, and there you can either run the whole test suite,
+or run each of the integration tests individually. 
+
+
+Understanding the Tests
+
+- for reusable code I've broken the out into commands, so if you go to the 'commands.js' file you'll
+see them piece by piece there, whereas in the tests they're called by the command.
+- I've shown how I use selectors by calling them via CSS and such directly in the tests, as well as by 
+breaking them out into a selectors file, renaming them so the tests are more readable as they're named specifically
+and then call them in the tests by selectors.selectorname(). 
+
+
+Prompt
+
+As a QA Engineer for Bacon, Inc., your manager has asked you to create a small automated
+regression test suite around Google's search results for bacon so that your team can better
+track its bacon popularity KPI. Your manager is much more concerned with whether the test
+are reliable than what language or framework you use, but somebody else may expand the
+tests in the future, so your code needs to be understandable. Your test suite should perform the
+following steps/steps:
+
+1. Open a web browser.
+2. Perform a Google search for bacon.
+3. Verify whether the first search result returned is for the Wikipedia article about bacon,
+the meat product.
+4. Verify that somewhere on the results page is a nutritional information facts area.
+5. Verify that the nutrition facts area contains a dropdown to select the format of bacon
+6. In that dropdown, select the "Bakon, baked" option.
+7. Confirm that the number of Calories shown per slice of bacon updates from 43 to 44.
+
+You must also provide instructions for how to set up and run these tests in a README file, and
+while your manager is comfortable on the command line, they're not highly technical, so you'll
+need to keep that in mind.
+
+Your manager has timeboxed this work to about four hours and would rather you not go over
+that, so if you don't finish, note down what you were unable to complete in a TODO file. They 
+have also suggested that there are some additional things they would like in your tests suite, if
+you get through all of that quickly. In no particular order, these are:
+
+- Verify that the Wikipdeia article for Sir Francis Bacon is not the first result returned
+- Verify that even if the search results page is reloaded, the Wikipedia article about bacon,
+the meat product, is still the first result.
+- Confirm that the bacon format with the highest Calories per serving is "Bacon, raw".
+- Use the National Weather Service's public API to check Saturday's weather forecast for
+Bacon, Indiana, and pass a test if the expected high temperature will be above freezing.
+
+The numbered steps are the really required ones, though, so get through those first.
+
+
+Issues
+
+- there may have been a drop down for Nutrition info on Wikipedia in the past, but there isn't ones
+currently. To show that I can navigate and automate a drop down I used etsy and displayed that in the 
+'dropdown.spec' file

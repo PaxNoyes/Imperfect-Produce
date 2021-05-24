@@ -1,0 +1,14 @@
+I didn't finish the National Weather test verifying that Saturday's forecast has
+a high of greater than 32. Trying splitText and Substring were the most promising,
+but being on a time crunch to get this to you made me just call it.
+
+what I tried:
+
+ //   cy.get(':nth-child(12) > .col-sm-10').invoke('text').then((text) => {
+    //     var splitText = text.split(/[ ,.]+/)[15]
+    //     expect(splitText).to.be.gt(32)
+    // });
+    // cy.log('splitText');
+    //   cy.get(':nth-child(12) > .col-sm-10').contains("with a high near `${high}`");
+    //   cy.get(':nth-child(12) > .col-sm-10').should("be.gte", `${high}`)
+    //   cy.get(':nth-child(12) > .col-sm-10').invoke('text').then(parseFloat).should('be.gte', '32');
